@@ -58,12 +58,13 @@ h2 {
     margin: 5px 0;
     background-color: #e9ecef;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .item:hover, .item.highlight {
-    background-color: #dee2e6;
-    transform: scale(1.02);
+    background-color: #cce5ff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 禁用项目样式 */
