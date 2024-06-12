@@ -80,6 +80,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             listItem.innerHTML = `${item.startTime} - ${item.endTime} - ${item.activity} <br>地點: ${item.location} <button ${conflict ? 'disabled' : ''} onclick="addItem('${item.startTime}', '${item.endTime}', '${item.activity}', '${item.location}')">選擇</button>`;
+            
+            listItem.addEventListener('mouseenter', function() {
+                const conflicts = agendaItems.filter(agendaItem => {
+                    const agendaStart = parseTime(agendaItem.startTime);
+                    const agendaEnd = parseTime(agendaItem.endTime);
+                    return isConflict(startTime, endTime, agendaStart, agendaEnd) && agendaItem.activity !== item.activity;
+                });
+
+                conflicts.forEach(conflictItem => {
+                    const conflictElement = [...availableItemsList.children].find(child => child.textContent.includes(conflictItem.activity));
+                    if (conflictElement) {
+                        conflictElement.classList.add('highlight');
+                    }
+                });
+            });
+
+            listItem.addEventListener('mouseleave', function() {
+                document.querySelectorAll('.highlight').forEach(highlightedItem => {
+                    highlightedItem.classList.remove('highlight');
+                });
+            });
+
             availableItemsList.appendChild(listItem);
         });
     }

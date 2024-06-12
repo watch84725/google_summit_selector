@@ -61,7 +61,7 @@ h2 {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.item:hover {
+.item:hover, .item.highlight {
     background-color: #dee2e6;
     transform: scale(1.02);
 }
@@ -119,7 +119,7 @@ th {
 
 th.time-col {
     width: 150px; /* 调整时间栏位的宽度 */
-    text-align: center;
+    text-align: left;
     white-space: nowrap; /* 防止换行 */
 }
 
@@ -186,7 +186,7 @@ td button:hover {
 }
 
 .cta-download-container {
-    text-align: center; /* 让下载按钮靠右 */
+    text-align: right; /* 让下载按钮靠右 */
     margin-top: 10px; /* 给下载按钮增加一些顶部间距 */
 }
 
