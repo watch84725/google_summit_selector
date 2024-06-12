@@ -211,3 +211,16 @@ td button:hover {
     border-radius: 10px;
     text-align: center;
 }
+
+/* Brief Popup 样式 */
+.brief-popup {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    max-width: 300px;
+    font-size: 14px;
+}
