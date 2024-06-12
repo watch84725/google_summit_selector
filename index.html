@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>2024 Google Cloud Summit Taipei 活動議程選擇系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2024 Google Cloud Summit Taipei 活動議程選擇系統</h1>
+        <div class="cta-container">
+            <a href="https://cloudonair.withgoogle.com/events/summit-taipei-2024" target="_blank" class="cta-button">前往活動連結</a>
+        </div>
+        <div class="row">
+            <div id="availableSection" class="column">
+                <h2>可選活動項目</h2>
+                <ul id="availableItems" class="item-list"></ul>
+            </div>
+
+            <div id="selectedSection" class="column">
+                <h2>已選擇的議程項目</h2>
+                <table id="selectedItemsTable">
+                    <thead>
+                        <tr>
+                            <th class="time-col">時間</th>
+                            <th class="activity-col">活動名稱</th>
+                            <th class="location-col">地點</th>
+                            <th class="operation-col">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="selectedItems"></tbody>
+                </table>
+                <div class="cta-download-container">
+                    <button id="downloadButton" class="cta-button">下載圖片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h2>生成圖片中...</h2>
+            <button id="closeOverlayButton" class="cta-button">關閉</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
